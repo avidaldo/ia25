@@ -7,7 +7,9 @@
 
 ## Resources
 
-### 
+- [Previous Year Repository](https://github.com/avidaldo/ia24)
+
+
 ## Additional External Resources
 
 - [Data Science cheatsheet](data-science-cheatsheet.pdf)
