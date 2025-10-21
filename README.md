@@ -11,7 +11,17 @@
 
 ### Basic Setup and Tools
 
-- [Main technologies for Python AI development](setup/setup.md)
+- [Overview of technologies for Python AI development](setup/setup.md)
+
+- NumPy
+  - [NumPy](./numpy/numpy1.ipynb)
+  - [Algebra with NumPy](./numpy/numpy2_algebra.ipynb)
+    - [Examples: Lists vs NumPy Array Manipulation](./numpy/lists_nd_arrays_examples.ipynb)
+
+- Pandas
+  - [Series and DataFrame structure](./pandas/pandas1.ipynb)
+  - [DataFrame operations](./pandas/pandas_dataframe_op.ipynb)
+    - [Example: DataFrame from different structures](./pandas/df_from_structures.ipynb)
 
 
 ## Resources
