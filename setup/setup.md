@@ -58,13 +58,16 @@ Jupyter is an application that allows us to create *notebooks* (documents that c
 
 **Virtual environments** allow us to isolate a project's **dependencies** from those of the operating system. This enables us to have different versions of the same **libraries** in different projects without conflicts between them.
 
+ - [Conda Tutorial: Environment and Package Management](conda_tutorial.md)
+ - [uv Tutorial: A Fast Python Package Installer and Resolver](uv_tutorial.md)
+
  - [Introduction to pip, conda, and virtual environments](https://www.youtube.com/watch?v=7Rd-Gj8o-6Q)
 
 We will mainly use the more recent `uv`; a modern tool for managing virtual environments and dependencies in Python projects.
 
  - [UV for Python… (Almost) All Batteries Included](https://www.youtube.com/watch?v=qh98qOND6MI)
 
-### [Dependency and Virtual Environment Management in Python](extra/py_dependencies.md)
+### [Dependency and Virtual Environment Management in Python](py_dependencies.md)
 
 
 ## [Google Colab](https://colab.research.google.com/)
