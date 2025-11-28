@@ -38,7 +38,9 @@
 - [Q-Learning](./qlearning/qlearning.ipynb)
   - [Frozen Lake Example](./qlearning/frozen_lake.ipynb)
 - [Random Forests](./algorithms/random_forest.ipynb)
-  
+
+
+### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
 
 ## Resources
