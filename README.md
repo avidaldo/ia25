@@ -12,6 +12,7 @@
 ### Basic Setup and Tools
 
 - [Overview of technologies for Python AI development](setup/setup.md)
+- [Repo on Python IDEs and Syntax](https://github.com/avidaldo/CSPy)
 
 - NumPy
   - [NumPy](./numpy/numpy1.ipynb)
@@ -37,6 +38,7 @@
 - [Decision Trees](./algorithms/decision_tree.ipynb)
 - [Q-Learning](./qlearning/qlearning.ipynb)
   - [Frozen Lake Example](./qlearning/frozen_lake.ipynb)
+  - [Bellman Equation In Depth](./qlearning/bellman_equation.ipynb)
 - [Random Forests](./algorithms/random_forest.ipynb)
 
 
