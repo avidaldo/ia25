@@ -41,6 +41,9 @@
   - [Bellman Equation In Depth](./qlearning/bellman_equation.ipynb)
 - [Random Forests](./algorithms/random_forest.ipynb)
 
+### Scikit-Learn basic examples
+
+- [California Housing Prices](./sklearn/01_basic_regression_workflow.ipynb)
 
 ### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
