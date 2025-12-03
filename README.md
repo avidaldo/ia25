@@ -20,8 +20,9 @@
     - [Examples: Lists vs NumPy Array Manipulation](./numpy/lists_nd_arrays_examples.ipynb)
 
 - Pandas
-  - [Series and DataFrame structure](./pandas/pandas1.ipynb)
+  - [Series and DataFrame structure](./pandas/pandas_structures.ipynb)
   - [DataFrame operations](./pandas/pandas_dataframe_op.ipynb)
+  - [DataFrame advanced transformations](./pandas/pandas_transformations.ipynb)
     - [Example: DataFrame from different structures](./pandas/df_from_structures.ipynb)
 
 
