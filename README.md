@@ -44,7 +44,14 @@
 
 ### Scikit-Learn basic examples
 
+- [Diabetes Regression](./sklearn/diabetes_regression.ipynb)
+- [Diabetes Classification](./sklearn/diabetes_classification.ipynb)
 - [California Housing Prices](./sklearn/01_basic_regression_workflow.ipynb)
+- Iris Dataset (Classification):
+    - [Data Structure and EDA](./sklearn/iris/01_iris_data_structure_and_analysis.ipynb)
+    - [Logistic Regression Workflow](./sklearn/iris/02_logistic_regression_workflow.ipynb)
+    - [Pipelines and validation](./sklearn/iris/03_pipelines_and_validation_classification.ipynb)
+- [MNIST with SVM - Classification Evaluation](./sklearn/mnist_svm_eval.ipynb)
 
 ### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
