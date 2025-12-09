@@ -42,6 +42,8 @@
   - [Bellman Equation In Depth](./qlearning/bellman_equation.ipynb)
 - [Random Forests](./algorithms/random_forest.ipynb)
 
+- [Overfitting and Train/Test Split](./algorithms/overfitting_train_test_split.ipynb)
+
 ### Scikit-Learn basic examples
 
 - [Diabetes Regression](./sklearn/diabetes_regression.ipynb)
