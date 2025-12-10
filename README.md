@@ -37,25 +37,24 @@
 - [K-means](./algorithms/kmeans.ipynb)
 - [K-Nearest Neighbors (KNN)](./algorithms/knn.md)
 - [Decision Trees](./algorithms/decision_tree.ipynb)
-- [Q-Learning](./qlearning/qlearning.ipynb)
+- [Q-Learning](./qlearning/qlearning.ipynb) (*Reinforcemente Learning*)
   - [Frozen Lake Example](./qlearning/frozen_lake.ipynb)
   - [Bellman Equation In Depth](./qlearning/bellman_equation.ipynb)
 - [Random Forests](./algorithms/random_forest.ipynb)
 
-- [Overfitting and Train/Test Split](./algorithms/overfitting_train_test_split.ipynb)
+### Machine Learning Workflows
 
-### Scikit-Learn basic examples
-
+- [Overfitting and Train/Test Split](./sklearn/overfitting_train_test_split.ipynb)
 - [Diabetes Regression](./sklearn/diabetes_regression.ipynb)
 - [Diabetes Classification](./sklearn/diabetes_classification.ipynb)
-- [California Housing Prices](./sklearn/01_basic_regression_workflow.ipynb)
+- [California Housing Prices - Simple Linear Regression](./sklearn/01_basic_regression_workflow.ipynb)
 - Iris Dataset (Classification):
     - [Data Structure and EDA](./sklearn/iris/01_iris_data_structure_and_analysis.ipynb)
     - [Logistic Regression Workflow](./sklearn/iris/02_logistic_regression_workflow.ipynb)
-    - [Pipelines and validation](./sklearn/iris/03_pipelines_and_validation_classification.ipynb)
-- [MNIST with SVM - Classification Evaluation](./sklearn/mnist_svm_eval.ipynb)
+    - [Pipelines and Validation](./sklearn/iris/03_pipelines_and_validation_classification.ipynb)
+- [MNIST with SVM - Detailed Classification Evaluation](./sklearn/mnist_svm_eval.ipynb)
 
-### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
+#### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
 
 ## Resources
