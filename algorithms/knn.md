@@ -14,16 +14,12 @@ In the following image, we can see how the decision surface of a KNN classifier 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/78/KNN_decision_surface_animation.gif)
 
-
-This algorithm does not "learn" in the traditional sense—**it is not trained, and no internal parameter values are fixed**. It simply uses the dataset as a "knowledge base" and makes predictions based on it. This can be a disadvantage, as **every time a prediction needs to be made, the entire dataset is used, which requires significant memory and processing resources**.
+KNN is a **lazy learning** (or **instance-based learning**) algorithm, which means it **learns by remembering, not by summarizing**. Unlike traditional "eager learning" algorithms that extract patterns and fix internal parameter values during training, **KNN stores the entire training dataset and uses it as a "knowledge base"** for making predictions. This can be a disadvantage, as **every time a prediction needs to be made, the entire dataset must be consulted, which requires significant memory and processing resources**.
 
 Thus, the "training" phase is very lightweight since it consists only of storing the training data. However, prediction is computationally expensive, as the distance from each test point to all training points must be calculated. Therefore, **KNN is a slow algorithm and is not suitable for large datasets**.
-
 
 ## Regression with KNN
 
 In the case of regression, KNN assigns the average of the values of the closest training points to the test point. In the following image, we can see the value that would be assigned to the point x=4 for K=1, K=2, and K=3:
 
 [![](img/knn_regression.jpg)](https://www.youtube.com/watch?v=3lp5CmSwrHI)
-
-
