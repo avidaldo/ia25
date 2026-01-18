@@ -56,6 +56,8 @@
 
 #### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
+#### [Thyroid Diseases - Classification](https://github.com/avidaldo/thyroid)
+
 
 ## Resources
 
