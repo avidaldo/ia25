@@ -53,6 +53,9 @@
     - [Logistic Regression Workflow](./sklearn/iris/02_logistic_regression_workflow.ipynb)
     - [Pipelines and Validation](./sklearn/iris/03_pipelines_and_validation_classification.ipynb)
 - [MNIST with SVM - Detailed Classification Evaluation](./sklearn/mnist_svm_eval.ipynb)
+- [Clustering and PCA on digits](./sklearn/clustering_pca_pipeline.ipynb)
+- [Clustering of Iris](./sklearn/iris/iris_clustering.ipynb)
+
 
 #### [California Housing Prices - End-to-End ML Project](https://github.com/avidaldo/california-e2e)
 
