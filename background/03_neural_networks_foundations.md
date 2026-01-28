@@ -20,7 +20,7 @@
     - Huge increase in funding and industrial investment
 
 - Main milestones:
-    - 2012: **AlexNet** (Krizhevsky, Sutskever, and Hinton) reduces the error on **ImageNet** to 15.3% (from 26%), demonstrating the power of CNNs and marking the beginning of the boom.
+    - 2012: **AlexNet** (Krizhevsky, Sutskever, and Hinton) reduces the top-5 error on **ImageNet** to 15.3% (from 26%), demonstrating the power of CNNs and marking the beginning of the boom.
     - 2014: Facebook's **DeepFace** achieves near-human accuracy (97.35%) in facial recognition.
     - 2014: Ian Goodfellow introduces **GANs** (Generative Adversarial Networks), revolutionizing content generation.
     - 2015: **ResNet** from Microsoft Research introduces residual connections, allowing the training of networks with over 100 layers.
