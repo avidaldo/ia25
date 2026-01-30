@@ -1,6 +1,6 @@
 # Core Jupyter and notebook execution
 jupyter>=1.0.0
-nbconvert>=7.0.0
+nbconvert>=7.17.0
 
 # Data science libraries (required by notebooks)
 numpy>=1.24.0
