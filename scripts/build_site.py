@@ -4,6 +4,7 @@ Build script for converting course materials to a static site for GitHub Pages.
 Converts markdown and Jupyter notebooks to HTML with proper link rewriting.
 """
 
+import html
 import os
 import re
 import shutil
@@ -11,6 +12,12 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import List, Tuple
+
+# Timeout constants (in seconds)
+DEFAULT_NOTEBOOK_TIMEOUT = 600  # 10 minutes per notebook
+SUBPROCESS_BUFFER_SECONDS = 60  # Extra time for subprocess overhead
+FALLBACK_CONVERSION_TIMEOUT = 120  # 2 minutes for non-execution conversion
+MARKDOWN_CONVERSION_TIMEOUT = 60  # 1 minute for markdown conversion
 
 try:
     import markdown
@@ -179,23 +186,22 @@ def convert_markdown_to_html(md_file: Path, output_file: Path) -> bool:
             )
         else:
             # Fallback: try using pandoc
-            cmd = ["pandoc", str(md_file), "-o", str(output_file), "-s", "--standalone"]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            cmd = ["pandoc", str(md_file), "-o", str(output_file), "-s"]
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=MARKDOWN_CONVERSION_TIMEOUT)
             
             if result.returncode != 0:
                 print(f"Warning: Failed to convert {md_file}: {result.stderr}")
-                # As last resort, wrap the markdown in HTML
-                html_content = f"<pre>{md_content}</pre>"
-            else:
-                return True
+                return False
+            return True
         
-        # Create a complete HTML document
+        # Create a complete HTML document with escaped title
+        escaped_title = html.escape(md_file.stem)
         full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{md_file.stem}</title>
+    <title>{escaped_title}</title>
 {GITHUB_STYLE_CSS}
 </head>
 <body>
@@ -215,8 +221,18 @@ def convert_markdown_to_html(md_file: Path, output_file: Path) -> bool:
         return False
 
 
-def convert_notebook_to_html(ipynb_file: Path, output_file: Path, timeout: int = 600) -> bool:
-    """Execute and convert a Jupyter notebook to HTML."""
+def convert_notebook_to_html(ipynb_file: Path, output_file: Path, timeout: int = DEFAULT_NOTEBOOK_TIMEOUT) -> bool:
+    """
+    Execute and convert a Jupyter notebook to HTML.
+    
+    Args:
+        ipynb_file: Path to the input notebook
+        output_file: Path to the output HTML file
+        timeout: Maximum execution time in seconds (default: 600)
+    
+    Returns:
+        True if conversion succeeded, False otherwise
+    """
     try:
         cmd = [
             "jupyter", "nbconvert",
@@ -228,7 +244,9 @@ def convert_notebook_to_html(ipynb_file: Path, output_file: Path, timeout: int =
             "--output", str(output_file.absolute())
         ]
         
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout + 60)
+        # Add buffer time for subprocess overhead
+        subprocess_timeout = timeout + SUBPROCESS_BUFFER_SECONDS
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=subprocess_timeout)
         
         if result.returncode != 0:
             print(f"Warning: Failed to execute/convert {ipynb_file}: {result.stderr}")
@@ -240,7 +258,7 @@ def convert_notebook_to_html(ipynb_file: Path, output_file: Path, timeout: int =
                 str(ipynb_file),
                 "--output", str(output_file.absolute())
             ]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=FALLBACK_CONVERSION_TIMEOUT)
             if result.returncode != 0:
                 print(f"Warning: Failed to convert {ipynb_file} without execution")
                 return False
@@ -261,21 +279,24 @@ def rewrite_links_in_html(html_file: Path) -> None:
             content = f.read()
         
         # Rewrite .md links to .html (but not external links)
+        # Handle anchors and query parameters correctly
         content = re.sub(
-            r'href="(?!http://|https://|#)([^"]*?)\.md"',
-            r'href="\1.html"',
+            r'href="(?!http://|https://|#)([^"#?]*?)\.md([#?][^"]*)?(")',
+            r'href="\1.html\2\3',
             content
         )
         
         # Rewrite .ipynb links to .html (but not external links)
+        # Handle anchors and query parameters correctly
         content = re.sub(
-            r'href="(?!http://|https://|#)([^"]*?)\.ipynb"',
-            r'href="\1.html"',
+            r'href="(?!http://|https://|#)([^"#?]*?)\.ipynb([#?][^"]*)?(")',
+            r'href="\1.html\2\3',
             content
         )
         
         # Add GitHub-like styling if not already present
-        if '<style>' not in content and GITHUB_STYLE_CSS not in content:
+        # Check for the specific GitHub style CSS to avoid duplicate injection
+        if GITHUB_STYLE_CSS not in content:
             # Insert style before </head> or after <head>
             if '</head>' in content:
                 content = content.replace('</head>', GITHUB_STYLE_CSS + '\n</head>')
@@ -299,9 +320,10 @@ def should_ignore(path: Path) -> bool:
         '.venv', 'venv', 'env'
     ]
     
-    path_str = str(path)
+    # Check if any part of the path matches ignore patterns
+    path_parts = path.parts
     for pattern in ignore_patterns:
-        if pattern in path_str:
+        if pattern in path_parts:
             return True
     
     return False
