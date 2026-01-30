@@ -188,6 +188,9 @@ def execute_notebook(notebook_path, output_path, timeout=600):
     try:
         print(f"Executing notebook: {notebook_path}")
         
+        # Ensure output directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
         # Execute and convert notebook to HTML
         cmd = [
             'jupyter', 'nbconvert',
