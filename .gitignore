@@ -1,2 +1,5 @@
 AGENTS.md
 sklearn/data/MNIST/*
+_site/
+__pycache__/
+*.pyc
