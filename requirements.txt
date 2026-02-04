@@ -1,0 +1,22 @@
+# Core Jupyter and notebook execution
+jupyter>=1.0.0
+nbconvert>=7.17.0
+
+# Data science libraries (required by notebooks)
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Reinforcement learning (for Q-learning notebooks)
+gymnasium>=0.29.0
+
+# Optional dependencies for some notebooks
+# Note: Some notebooks may still fail due to missing data or other issues
+dtreeviz>=2.2.0
+kagglehub>=0.2.0
+
+# Markdown conversion and code highlighting
+markdown>=3.4.0
+Pygments>=2.15.0
