@@ -1,2 +1,7 @@
 AGENTS.md
+
 sklearn/data/MNIST/*
+
+pytorch/01-deep-learning-fundamentals/*.pth
+pytorch/01-deep-learning-fundamentals/data/FashionMNIST/
+

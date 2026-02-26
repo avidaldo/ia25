@@ -60,6 +60,10 @@
 - [Thyroid Diseases - Classification](https://github.com/avidaldo/thyroid)
 - [King County House Sales - Regression](https://github.com/avidaldo/king-county)
 
+### Deep Learning with PyTorch
+
+- [Deep Learning Fundamentals](./pytorch/01-deep-learning-fundamentals/README.md)
+
 ## Additional External Resources
 
 - [Data Science cheatsheet](data-science-cheatsheet.pdf)
