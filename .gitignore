@@ -5,3 +5,11 @@ sklearn/data/MNIST/*
 pytorch/01-deep-learning-fundamentals/*.pth
 pytorch/01-deep-learning-fundamentals/data/FashionMNIST/
 
+pytorch/02-computer-vision-cnn/CIFAR-10/data/cifar-10-batches-py/
+
+pytorch/02-computer-vision-cnn/data/
+pytorch/02-computer-vision-cnn/CIFAR-10/cifar_net.pth
+
+data/
+*.pth
+

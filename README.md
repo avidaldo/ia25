@@ -63,6 +63,7 @@
 ### Deep Learning with PyTorch
 
 - [Deep Learning Fundamentals](./pytorch/01-deep-learning-fundamentals/README.md)
+- [Computer Vision with CNNs](./pytorch/02-computer-vision-cnn/README.md)
 
 ## Additional External Resources
 
