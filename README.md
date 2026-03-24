@@ -54,16 +54,18 @@
 - [Clustering and PCA on digits](./sklearn/clustering_pca_pipeline.ipynb)
 - [Clustering of Iris](./sklearn/iris/iris_clustering.ipynb)
 
+### Deep Learning with PyTorch
+
+- [Deep Learning Fundamentals](./pytorch/01-deep-learning-fundamentals/README.md)
+- [Computer Vision with CNNs](./pytorch/02-computer-vision-cnn/README.md)
+
 ### Complete Projects
 
 - [California Housing Prices - End-to-End ML Regression Project](https://github.com/avidaldo/california-e2e)
 - [Thyroid Diseases - Classification](https://github.com/avidaldo/thyroid)
 - [King County House Sales - Regression](https://github.com/avidaldo/king-county)
 
-### Deep Learning with PyTorch
-
-- [Deep Learning Fundamentals](./pytorch/01-deep-learning-fundamentals/README.md)
-- [Computer Vision with CNNs](./pytorch/02-computer-vision-cnn/README.md)
+### [Computer Vision with OpenCV and YOLO](https://github.com/avidaldo/computer-vision)
 
 ## Additional External Resources
 
