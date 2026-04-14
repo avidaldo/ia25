@@ -67,6 +67,10 @@
 
 ### [Computer Vision with OpenCV and YOLO](https://github.com/avidaldo/computer-vision)
 
+### Applied projects
+
+- [AI chat with guardrails](https://github.com/avidaldo/ai-chat-guardrails)
+
 ## Additional External Resources
 
 - [Data Science cheatsheet](data-science-cheatsheet.pdf)
