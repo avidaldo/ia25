@@ -67,9 +67,10 @@
 
 ### [Computer Vision with OpenCV and YOLO](https://github.com/avidaldo/computer-vision)
 
-### Applied projects
+### LLMs consumption projects
 
 - [AI chat with guardrails](https://github.com/avidaldo/ai-chat-guardrails)
+- [RAG](https://github.com/A-nit-A/IES_Teis_AI_Triage)
 
 ## Additional External Resources
 
