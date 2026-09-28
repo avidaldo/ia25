@@ -1,4 +1,4 @@
-# Artificial Intelligence - 2024/25
+# Artificial Intelligence - 2025/26
 
 ## Notes and Examples
 
